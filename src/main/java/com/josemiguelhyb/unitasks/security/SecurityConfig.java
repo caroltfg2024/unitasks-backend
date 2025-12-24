@@ -52,7 +52,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:4200")); // Angular
+        // configuration.setAllowedOrigins(List.of("http://localhost:4200")); // Angular
+        // local
+        configuration.setAllowedOrigins(List.of("https://unitasks-frontend.onrender.com")); // Angular en Render
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
